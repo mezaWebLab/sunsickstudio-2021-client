@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Page from "../layouts/Page/Page";
+import Page from "layouts/Page/Page.js";
 import Section from "components/UI/Section/Section";
 import Header from "components/UI/Header/Header";
 import Container from "components/UI/Container/Container";
