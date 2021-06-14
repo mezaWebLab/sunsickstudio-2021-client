@@ -1,0 +1,67 @@
+.accordion-item {
+    width       : 100%;
+    position    : relative;
+    line-height : 1;
+    // margin-top  : -4px;
+
+    &:last-child {
+        // margin-bottom : 0px;
+    }
+
+    &:first-child {
+        // margin-top : 0px;
+    }
+
+    &.active {
+        .content-wrapper .content {
+            height : auto;
+        }
+    }
+
+    button {
+        width          : 100%;
+        padding        : 0px;
+        background     : #303030;
+        border         : none;
+        border-bottom  : 1px solid white;
+        color          : white;
+        line-height    : 1;
+        letter-spacing : 3px;
+
+        div {
+            display : inline-block;
+
+            &:nth-child(1) {
+                text-align : left;
+                padding    : 20px;
+                width      : calc(100% - 65px);
+            }
+
+            &:nth-child(2) {
+                width   : 65px;
+                height  : 100%;
+                padding : 20px 0px;
+            }
+        }
+    }
+
+    .content-wrapper {
+        background : #3a3a3a;
+        overflow   : hidden;
+        height     : 0px;
+        transition : height 0.25s ease-in-out;
+
+        .content {
+            padding : 15px;
+            color   : white;
+
+            ul {
+                padding-left : 15px;
+
+                li {
+                    margin-bottom : 5px;
+                }
+            }
+        }
+    }
+}

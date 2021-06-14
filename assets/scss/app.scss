@@ -1,0 +1,31 @@
+// Main CSS Framework (Simplified CSS)
+@import "./simplified/simplified.scss";
+
+// Utils
+@import "components/Utils/MobileOnly/MobileOnly.scss";
+@import "components/Utils/DesktopOnly/DesktopOnly.scss";
+
+// UI
+@import "assets/scss/simplified/assets/fonts.scss";
+@import "components/UI/Container/Container.scss";
+@import "components/UI/Section/Section.scss";
+@import "components/UI/Header/Header.scss";
+
+// Layouts
+@import "layouts/Page/Page.scss";
+@import "layouts/Admin/Admin.scss";
+
+// Widgets
+@import "components/Widgets/Accordion/Accordion.scss";
+@import "components/Widgets/Accordion/AccordionItem/AccordionItem.scss";
+
+// Blocks
+@import "components/Blocks/Global/Navigation/Navigation.scss";
+@import "components/Blocks/Global/Footer/Footer.scss";
+@import "components/Blocks/Global/MobileMenu/MobileMenu.scss";
+@import "components/Blocks/Hero/Hero.scss";
+@import "components/Blocks/Home/ContactForm/ContactForm.scss";
+@import "components/Blocks/Global/BackgroundVideo/BackgroundVideo.scss";
+
+// Pages
+@import "pages/home.scss";

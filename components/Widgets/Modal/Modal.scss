@@ -1,0 +1,21 @@
+.modal {
+    width      : 100vw;
+    height     : 100vh;
+    top        : 0px;
+    position   : fixed;
+    left       : 100%;
+    background : rgb(22, 22, 22);
+    z-index    : 30;
+    overflow   : hidden;
+    transition : left 0.25s ease-in-out;
+    
+    .close-btn {
+        position   : absolute;
+        right      : 15px;
+        font-size  : 2em;
+        border     : none;
+        background : none;
+        color      : white;
+        top        : 15px;
+    }
+}

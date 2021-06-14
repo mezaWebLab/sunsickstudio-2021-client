@@ -1,0 +1,15 @@
+.desktop-only {
+    display : none;
+
+    @include md {
+        display : block;
+
+        &.flex {
+            display : flex;
+        }
+
+        &.grid {
+            display : grid;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "next-js-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "chmod 755 ./assets/scripts/dev.sh ; ./assets/scripts/dev.sh",
+    "build": "next build",
+    "start": "chmod 755 ./assets/scripts/start.sh ; ./assets/scripts/start.sh",
+    "prod": "chmod 755 ./assets/scripts/prod.sh ; ./assets/scripts/prod.sh",
+    "new-page": "node --no-warnings ./assets/scripts/new-page.js"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "axios": "^0.21.1",
+    "inquirer": "^8.0.0",
+    "next": "10.2.0",
+    "node-sass": "^4.14.1",
+    "open": "^8.0.8",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-image-lightbox": "^5.1.1",
+    "react-responsive-masonry": "^2.1.2",
+    "sass-loader": "^11.1.1",
+    "swiper": "^6.7.0"
+  }
+}

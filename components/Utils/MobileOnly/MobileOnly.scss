@@ -1,0 +1,15 @@
+.mobile-only {
+    display : block;
+
+    &.flex {
+        display : flex;
+    }
+
+    &.grid {
+        display : grid;
+    }
+
+    @include md {
+        display : none;
+    }
+}

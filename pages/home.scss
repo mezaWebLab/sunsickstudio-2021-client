@@ -1,0 +1,38 @@
+#home {
+    .section {
+        &:nth-child(1) {
+            .swiper-container {
+                img {
+                    width : 100%;
+                }
+
+                .swiper-button-prev,
+                .swiper-button-next {
+                    filter : drop-shadow(0px 0px 4px rgba(0, 0, 0, 1));
+                    color  : white !important;
+                }
+            }
+
+            .accordion {
+                margin-top : 20px;
+            }
+        }
+
+        &:nth-child(2) {
+            iframe {
+                height : 362px;
+                width  : 100%;
+            }
+        }
+
+        &:nth-child(3) {
+            .see-full-discography {
+                text-align : center;
+                display    : block;
+                margin-top : 20px;
+                font-size  : 12px;
+                color      : white;
+            }
+        }
+    }
+}
