@@ -28,7 +28,6 @@ export default function Hero() {
                 </source>
             </video> */}
             <Image 
-                className="shake-little shake-constant"
                 width={180}
                 height={180}
                 src="/assets/global/sunsick-studio-logo.png"
