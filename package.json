@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "chmod 755 ./assets/scripts/start.sh ; ./assets/scripts/start.sh",
     "prod": "chmod 755 ./assets/scripts/prod.sh ; ./assets/scripts/prod.sh",
-    "new-page": "node --no-warnings ./assets/scripts/new-page.js"
+    "new-page": "node --no-warnings ./assets/scripts/new-page.js",
+    "refresh": "chmod 755 ./assets/scripts/refresh.sh ; ./assets/scripts/refresh.sh": 
   },
   "dependencies": {
     "app-root-path": "^3.0.0",

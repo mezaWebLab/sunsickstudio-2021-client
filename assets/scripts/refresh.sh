@@ -7,5 +7,6 @@ else
     exit
 fi
 
-next build
-next start -p $PORT
+npm install
+npm run build
+pm2 restart $PM2_PROCESS_NAME
