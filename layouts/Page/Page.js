@@ -2,7 +2,7 @@ import Navigation from "../../components/Blocks/Global/Navigation/Navigation";
 import Footer from "../../components/Blocks/Global/Footer/Footer";
 import MobileMenu from "../../components/Blocks/Global/MobileMenu/MobileMenu";
 import { useState } from "react";
-import Hero from "components/blocks/Hero/Hero";
+import Hero from "components/Blocks/Hero/Hero";
 import BackgroundVideo from "components/Blocks/Global/BackgroundVideo/BackgroundVideo";
 
 export default function Page(props) {
