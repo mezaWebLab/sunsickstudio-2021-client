@@ -17,21 +17,9 @@ export default function Hero() {
         <div 
             className={ios ? 'ios' : ''}
             id="hero">
-            {/* <video 
-                autoPlay 
-                muted 
-                playsInline
-                loop>
-                <source 
-                    src="/assets/global/hero-video-bg.mp4" 
-                    type="video/mp4">
-                </source>
-            </video> */}
-            <Image 
-                width={180}
-                height={180}
-                src="/assets/global/sunsick-studio-logo.png"
-                alt="Sunsick Studio Logo" />
+            <img 
+                alt="Sunsick Studio Logo"
+                src="/assets/global/sunsick-studio-logo.png" />
             <div className="fade"></div>
         </div>
     );

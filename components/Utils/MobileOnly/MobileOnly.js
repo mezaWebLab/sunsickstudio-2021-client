@@ -8,8 +8,6 @@ export default function MobileOnly(props) {
     MobileOnly.defaultProps = { display: "block" };
 
     return (
-        <div className={`mobile-only${ ' ' + props.display }`}>
-            {props.children}
-        </div>
+        <div className={`mobile-only${ ' ' + props.display }`}>{props.children}</div>
     );
 }

@@ -27,7 +27,7 @@ export default function AccordionItem(props) {
                     {props.title}
                 </div>
                 <div>
-                    {isActive ? <i class="las la-minus"></i> : <i class="las la-plus"></i>}
+                    {isActive ? <i className="las la-minus"></i> : <i className="las la-plus"></i>}
                 </div>
             </button>
             <div 

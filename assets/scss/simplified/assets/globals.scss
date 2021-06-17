@@ -111,7 +111,8 @@ body {
     }
 }
 
-[md-2] {
+[md-2],
+[md="2"] {
     @include md {
         grid-template-columns : repeat(2, minmax(0, 1fr));
         display               : grid;

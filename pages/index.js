@@ -37,26 +37,27 @@ export default function Home() {
                 <Section>
                     <Container>
                         <Header>OUR STUDIO</Header>
-                        <Swiper
-                            navigation
-                            spaceBetween={50}
-                            slidesPerView={1}
-                            onSlideChange={() => console.log('slide change')}
-                            onSwiper={(swiper) => console.log(swiper)}>
-                            <SwiperSlide>
-                                <img src="/assets/pages/home/sunsick-.jpg" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src="/assets/pages/home/sunsick-.jpg" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src="/assets/pages/home/sunsick-.jpg" />
-                            </SwiperSlide>
-                            <SwiperSlide>
-                                <img src="/assets/pages/home/sunsick-.jpg" />
-                            </SwiperSlide>
-                        </Swiper>
-                        <Accordion>
+                        <div md="2">
+                            <Swiper
+                                navigation
+                                spaceBetween={50}
+                                slidesPerView={1}
+                                onSlideChange={() => console.log('slide change')}
+                                onSwiper={(swiper) => console.log(swiper)}>
+                                <SwiperSlide>
+                                    <img src="/assets/pages/home/sunsick-.jpg" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src="/assets/pages/home/sunsick-.jpg" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src="/assets/pages/home/sunsick-.jpg" />
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <img src="/assets/pages/home/sunsick-.jpg" />
+                                </SwiperSlide>
+                            </Swiper>
+                            <Accordion>
                             <AccordionItem title="GEAR LIST 1">
                                 <ul>
                                     <li>Item 1</li>
@@ -85,6 +86,7 @@ export default function Home() {
                                 </ul>
                             </AccordionItem>
                         </Accordion>
+                        </div>
                     </Container>
                 </Section>
                 <Section alt={true}>

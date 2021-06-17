@@ -1,15 +1,15 @@
 .mobile-only {
-    display : block;
+    display : block !important;
 
     &.flex {
-        display : flex;
+        display : flex !important;
     }
 
     &.grid {
-        display : grid;
+        display : grid !important;
     }
 
     @include md {
-        display : none;
+        display : none !important;
     }
 }

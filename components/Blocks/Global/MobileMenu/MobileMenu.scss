@@ -32,21 +32,21 @@
             $baseAnimationDelay : 0.25s;
             display             : block;
             color               : white;
-            padding             : 15px;
+            padding             : 10px;
             text-decoration     : none;
             opacity             : 0;
-            transform           : translateY(-10px);
-            font-size           : 2em;
+            transform           : translateY(-10px) scale(1.2);
+            font-size           : 1.6em;
             animation           : fade-in 0.25s ease-in-out 1 forwards;
 
             @keyframes fade-in {
                 0% { 
                     opacity   : 0;
-                    transform : translateY(-10px);
+                    transform : translateY(-10px) scale(1.2);
                 }
                 100% {
                     opacity   : 1;
-                    transform : translateY(0);
+                    transform : translateY(0) scale(1);
                 }
             }
 
@@ -68,6 +68,29 @@
 
             &:nth-child(5) {
                 animation-delay : $baseAnimationDelay * 2;
+            }
+        }
+    }
+
+    .logo {
+        $baseAnimationDelay : 0.25s;
+        width               : 75px;
+        display             : block;
+        opacity             : 0;
+        transform           : translateY(-10px) scale(1.2);
+        position            : relative;
+        margin              : 15px auto;
+        animation           : fade-in 0.25s ease-in-out 1 forwards;
+        animation-delay     : $baseAnimationDelay * 2.25;
+
+        @keyframes fade-in {
+            0% { 
+                opacity   : 0;
+                transform : translateY(-10px) scale(1.2);
+            }
+            100% {
+                opacity   : 1;
+                transform : translateY(0) scale(1);
             }
         }
     }

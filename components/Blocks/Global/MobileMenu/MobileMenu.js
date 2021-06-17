@@ -29,6 +29,10 @@ export default function MobileMenu(props) {
                     );
                 })}
             </div>
+            <img 
+                alt="Sunsick Studio Logo"
+                src="/assets/global/sunsick-studio-logo.png"
+                className="logo" />
         </div>
     );
 }

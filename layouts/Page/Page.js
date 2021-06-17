@@ -9,23 +9,23 @@ export default function Page(props) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
         navigation = [
             {
-                title: "Home",
-                href: "#"
+                title: "HOME",
+                href: "/"
             },
             {
-                title: "Our Studio",
+                title: "OUR STUDIO",
                 href: "#our-studio"
             },
             {
-                title: "Listen",
+                title: "LISTEN",
                 href: "#listen"
             },
             {
-                title: "Discography",
+                title: "DISCOGRAPHY",
                 href: "#discography"
             },
             {
-                title: "Contact Us",
+                title: "CONTACT US",
                 href: "#contact-us"
             }
         ];
