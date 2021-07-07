@@ -1,0 +1,89 @@
+.arrow-down {
+    width           : 100px;
+    height          : 50px;
+    display         : flex;
+    justify-content : center;
+    align-items     : center;
+    position        : absolute;
+    bottom          : 15px;
+
+    .arrow {
+        position        : relative;
+        width           : 57px;
+        height          : 17px;
+        display         : flex;
+        justify-content : center;
+        align-items     : center;
+        
+        .lines {
+            &:nth-child(1) {
+                .line {
+                    &:nth-child(1) {
+                        transform : rotate(30deg);
+                        left      : 0px;
+                    }
+
+                    &:nth-child(2) {
+                        transform : rotate(-30deg);
+                        right     : 0px;
+                    }
+                }
+            }
+            
+            &:nth-child(2) {
+                opacity   : 0.5;
+                animation : move-up 1s linear infinite;
+                
+                .line {
+                    &:nth-child(1) {
+                        transform : rotate(-30deg);
+                        left      : -3px;
+                    }
+
+                    &:nth-child(2) {
+                        transform : rotate(30deg);
+                        right     : -3px;
+                    }
+                }
+            }
+            
+            &:nth-child(3) {
+                opacity         : 0.5;
+                animation       : move-up 1s linear infinite;
+                animation-delay : 500ms;
+                
+                .line {
+                    &:nth-child(1) {
+                        transform : rotate(-30deg);
+                        left      : -3px;
+                    }
+
+                    &:nth-child(2) {
+                        transform : rotate(30deg);
+                        right     : -3px;
+                    }
+                }
+            }
+            
+            .line {
+                width            : 31px;
+                height           : 2px;
+                background       : white;
+                border-radius    : 20px;
+                position         : absolute;
+                transform-origin : 50% 50%;
+            }
+        }
+    }
+}
+
+@keyframes move-up {
+    0% {
+        transform: translateY(0px);
+    }
+    
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}

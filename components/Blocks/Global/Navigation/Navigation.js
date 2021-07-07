@@ -4,9 +4,16 @@ import DesktopOnly from "components/Utils/DesktopOnly/DesktopOnly";
 import Container from "components/UI/Container/Container";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import scrollToElement from "scroll-to-element";
 
 export default function Navigation(props) {
-    const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false),
+        handlers = {
+            onLogoClick(e) {
+                e.nativeEvent.preventDefault();
+                scrollToElement("#hero");
+            }
+        }
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
@@ -24,7 +31,11 @@ export default function Navigation(props) {
                         className="inner-block-2"
                         columns="2">
                         <div className="block block-1">
-                            <img src="/assets/global/sunsick-studio-logo.png" />
+                            <a 
+                                onClick={e => handlers.onLogoClick(e)}
+                                href="#">
+                                <img src="/assets/global/sunsick-studio-logo.png" />
+                            </a>
                         </div>
                         <div className="block block-2">
                             <MobileOnly>

@@ -23,6 +23,9 @@ const utils = {
         });
     
         return images;
+    },
+    scrollTo(target) {
+        
     }
 }
 

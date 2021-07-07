@@ -19,7 +19,7 @@ $container-max-width : 1024px;
 /* --------------- */
 /*      Grid       */
 /* --------------- */
-$grid-gap : 15px;
+$grid-gap : 25px;
 
 /* --------------- */
 /*      Block      */
@@ -97,15 +97,16 @@ $h1-margin         : 0px 0px 15px 0px;
 $h2-font-size      : 20px;
 $h2-font-size-sm   : 20px;
 $h2-font-size-xsm  : 20px;
-$h2-font-size-md   : 1.5em;
-$h2-font-size-xmd  : 1.5em;
-$h2-font-size-lg   : 1.5em;
-$h2-font-size-xlg  : 1.5em;
-$h2-font-size-xxlg : 1.5em;
+$h2-font-size-md   : 25px;
+$h2-font-size-xmd  : 25px;
+$h2-font-size-lg   : 30px;
+$h2-font-size-xlg  : 30px;
+$h2-font-size-xxlg : 30px;
 $h2-font-weight    : $font-weight-header;
 $h2-line-height    : $line-height-header;
 $h2-letter-spacing : $letter-spacing-header;
 $h2-margin         : 0px 0px 15px 0px;
+$h2-margin-md      : 0px 0px 30px 0px;
 
 // h3
 $h3-font-size      : 1.17em;

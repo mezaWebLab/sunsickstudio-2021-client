@@ -1,0 +1,63 @@
+.discography-list {
+    position   : fixed;
+    top        : 0px;
+    left       : 0px;
+    width      : 100vw;
+    height     : 100vh;
+    background : rgb(10, 10, 10);
+    z-index    : 100;
+    padding    : 25px 0;
+
+    h2 {
+        text-align : center;
+    }
+
+    .close-btn {
+        position   : absolute;
+        right      : 15px;
+        font-size  : 2em;
+        border     : none;
+        background : none;
+        color      : white;
+        top        : 20px;
+    }
+
+    table {
+        font-size     : 12px;
+        margin-top    : 35px;
+        table-layout  : fixed;
+        width         : 100%;
+        color         : white;
+        border-radius : 5px;
+        border        : 1px solid rgb(85, 85, 85);
+
+        thead {
+            background : #313131;
+
+            th {
+                font-weight : bold;
+                padding     : 10px;
+            }
+        }
+
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background : #252525;
+                }
+
+                &:nth-child(even) {
+                    background : #1a1a1a;
+                }
+
+                td {
+                    padding : 10px;
+
+                    &:nth-child(1) {
+                        border-right : 1px solid rgb(85, 85, 85);
+                    }
+                }
+            }
+        }
+    }
+}

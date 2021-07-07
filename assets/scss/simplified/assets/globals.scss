@@ -726,7 +726,7 @@ h2,
     letter-spacing : $h2-letter-spacing;
     @include sm { font-size : $h2-font-size-sm }
     @include xsm { font-size : $h2-font-size-xsm }
-    @include md { font-size : $h2-font-size-md }
+    @include md { font-size : $h2-font-size-md; margin : $h2-margin-md; }
     @include xmd { font-size : $h2-font-size-xmd; }
     @include lg { font-size : $h2-font-size-lg }
     @include xlg { font-size : $h2-font-size-xlg }

@@ -14,14 +14,15 @@
     "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "inquirer": "^8.0.0",
-    "next": "10.2.0",
-    "node-sass": "^4.14.1",
+    "next": "^11.0.1",
+    "node-sass": "^5",
     "open": "^8.0.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-image-lightbox": "^5.1.1",
     "react-responsive-masonry": "^2.1.2",
     "sass-loader": "^11.1.1",
+    "scroll-to-element": "^2.0.3",
     "swiper": "^6.7.0"
   }
 }

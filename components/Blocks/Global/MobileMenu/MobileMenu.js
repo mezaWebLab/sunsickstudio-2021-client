@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import scrollToElement from "scroll-to-element";
 
 export default function MobileMenu(props) {
     const [open, setOpen] = useState(false),
@@ -6,6 +7,12 @@ export default function MobileMenu(props) {
             onClose() {
                 setOpen(false);
                 setTimeout(() => props.toggleMobileMenu(), 250);
+            },
+            onNavLinkClick(e, href) {
+                e.nativeEvent.preventDefault();
+                const targetEl = document.querySelector("#navigation");
+                scrollToElement(href, { offset: -targetEl.offsetHeight });
+                this.onClose();
             }
         };
 
@@ -22,8 +29,9 @@ export default function MobileMenu(props) {
                 {props.navigation.map((navItem, i) => {
                     return (
                         <a 
+                            onClick={e => handlers.onNavLinkClick(e, navItem.href)}
                             key={i}
-                            href={navItem.href}>
+                            href="#">
                             {navItem.title}
                         </a>
                     );

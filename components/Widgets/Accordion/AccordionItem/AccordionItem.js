@@ -4,14 +4,8 @@ export default function AccordionItem(props) {
     const [isActive, setIsActive] = useState(false),
         handlers = {
             onToggle() {
-                if (isActive) {
-                    refs.contentWrapper.current.style.height = "0px";
-                } else {
-                    refs.contentWrapper.current.style.height = refs.content.current.offsetHeight + "px";
-                }
-
+                refs.contentWrapper.current.style.height = isActive ? "0px" : refs.content.current.offsetHeight + "px";
                 setTimeout(() => setIsActive(isActive ? false : true), 250);
-
                 props.onToggle();
             }
         },

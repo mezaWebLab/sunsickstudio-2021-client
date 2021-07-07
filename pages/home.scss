@@ -1,7 +1,12 @@
 #home {
     .section {
-        &:nth-child(1) {
+        &#our-studio {
             .swiper-container {
+                @include md {
+                    width  : 100%;
+                    height : fit-content;
+                }
+
                 img {
                     width : 100%;
                 }
@@ -15,17 +20,21 @@
 
             .accordion {
                 margin-top : 20px;
+
+                @include md {
+                    margin-top : 0px;
+                }
             }
         }
 
-        &:nth-child(2) {
+        &#listen {
             iframe {
                 height : 362px;
                 width  : 100%;
             }
         }
 
-        &:nth-child(3) {
+        &#discography {
             .see-full-discography {
                 text-align : center;
                 display    : block;

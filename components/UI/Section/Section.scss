@@ -5,6 +5,10 @@
     z-index    : 2;
     background : #202020;
 
+    @include md {
+        padding : 80px 0px;
+    }
+
     &.alt {
         background : #1B1B1B;
     }

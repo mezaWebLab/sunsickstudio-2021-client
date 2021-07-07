@@ -10,7 +10,7 @@ export default function Page(props) {
         navigation = [
             {
                 title: "HOME",
-                href: "/"
+                href: "#hero"
             },
             {
                 title: "OUR STUDIO",

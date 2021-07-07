@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { useEffect, useState } from "react";
+import ArrowDown from "components/UI/ArrowDown/ArrowDown";
 
 export default function Hero() {
     const [ios, setIos] = useState(false);
@@ -21,6 +21,7 @@ export default function Hero() {
                 alt="Sunsick Studio Logo"
                 src="/assets/global/sunsick-studio-logo.png" />
             <div className="fade"></div>
+            <ArrowDown />
         </div>
     );
 }
