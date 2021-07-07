@@ -6,11 +6,11 @@ export default function ContactForm() {
                     <div>
                         <input 
                             type="text"
-                            class="name"
+                            className="name"
                             placeholder="Your Name" />
                         <input 
                             type="text"
-                            class="email"
+                            className="email"
                             placeholder="Your Email" />
                     </div>
                     <div>
