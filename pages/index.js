@@ -101,11 +101,12 @@ export default function Home() {
                     <Container>
                         <Header>LISTEN</Header>
                         <iframe 
-                            style={{height: "362px"}}
-                            height="362px"
-                            src="https://bandcamp.com/EmbeddedPlayer/album=2882544774/size=large/bgcol=333333/linkcol=ffffff/artwork=none/transparent=true/" 
-                            seamless>
-                                <a href="https://overself.bandcamp.com/album/ingress">Ingress by Overself</a>
+                            src="https://open.spotify.com/embed/playlist/2ngJuLSYa49LtYngLiyk6Y" 
+                            width="100%" 
+                            height="380" 
+                            frameBorder="0" 
+                            allowtransparency="true" 
+                            allow="encrypted-media">
                         </iframe>
                     </Container>
                 </Section>
