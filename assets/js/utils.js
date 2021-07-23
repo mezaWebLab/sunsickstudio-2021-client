@@ -26,6 +26,10 @@ const utils = {
     },
     scrollTo(target) {
         
+    },
+    apiUrl(path) {
+        console.log(process.env.SUNSICK_API_URL);
+        return process.env.SUNSICK_API_URL + path;
     }
 }
 

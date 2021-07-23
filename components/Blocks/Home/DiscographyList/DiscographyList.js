@@ -18,26 +18,14 @@ export default function DiscographyList(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>The table body</td>
-                            <td>with two columns</td>
-                        </tr>
-                        <tr>
-                            <td>The table body</td>
-                            <td>with two columns</td>
-                        </tr>
-                        <tr>
-                            <td>The table body</td>
-                            <td>with two columns</td>
-                        </tr>
-                        <tr>
-                            <td>The table body</td>
-                            <td>with two columns</td>
-                        </tr>
-                        <tr>
-                            <td>The table body</td>
-                            <td>with two columns</td>
-                        </tr>
+                        {props.discography.map(release => {
+                            return (
+                                <tr>
+                                    <td>{release.name}</td>
+                                    <td>{release.tracks}</td>
+                                </tr>
+                            );
+                        })}
                     </tbody>
                 </table>
             </Container>

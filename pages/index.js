@@ -11,19 +11,12 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import ContactForm from "components/Blocks/Home/ContactForm/ContactForm";
 import DiscographyList from "components/Blocks/Home/DiscographyList/DiscographyList";
 import { useState } from "react";
+import Utils from "assets/js/utils";
 
 SwiperCore.use([Navigation]);
 
 function Home(props) {
     const [showDiscographyList, setShowDiscographyList] = useState(false),
-        discographyImages = [
-            "/assets/pages/home/discography/ex-1.jpg",
-            "/assets/pages/home/discography/ex-2.jpg",
-            "/assets/pages/home/discography/ex-3.jpg",
-            "/assets/pages/home/discography/ex-4.jpg",
-            "/assets/pages/home/discography/ex-5.jpg",
-            "/assets/pages/home/discography/ex-9.jpg"
-        ],
         handlers = {
             onContactFormComplete() {
 
@@ -38,8 +31,22 @@ function Home(props) {
                 }
 
                 return parsedList;
+            },
+            getStudioGallery() {
+                return props.pageData.galleries.find(gallery => { return gallery.Name === "Studio Gallery" }).gallery;
+            },
+            getDiscographyGallery() {
+                return props.pageData.galleries.find(gallery => { return gallery.Name === "Discography Gallery" }).gallery;
+            },
+            getDiscographyList() {
+                return props.pageData.artists.map(artist => {
+                    return {
+                        name: artist.Name,
+                        tracks: artist.Tracks
+                    };
+                });
             }
-        }
+        };
 
     return (
         <Page>
@@ -61,26 +68,21 @@ function Home(props) {
                                 slidesPerView={1}
                                 onSlideChange={() => console.log('slide change')}
                                 onSwiper={swiper => console.log(swiper)}>
-                                <SwiperSlide>
-                                    <img src="/assets/pages/home/sunsick-.jpg" />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img src="/assets/pages/home/sunsick-2.jpg" />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img src="/assets/pages/home/sunsick-.jpg" />
-                                </SwiperSlide>
-                                <SwiperSlide>
-                                    <img src="/assets/pages/home/sunsick-2.jpg" />
-                                </SwiperSlide>
+                                {helpers.getStudioGallery().map((image, i) => {
+                                    return (
+                                        <SwiperSlide key={i}>
+                                            <img src={Utils.apiUrl(image.url)} />
+                                        </SwiperSlide>
+                                    );
+                                })}
                             </Swiper>
                             <Accordion>
-                                {props.pageData.gear_lists.map(list => {
+                                {props.pageData.gear_lists.map((list, i) => {
                                     return (
-                                        <AccordionItem title={list.Title}>
-                                            <ul>
-                                                {helpers.parseRawGearList(list.Items).map(item => { return <li>{item}</li> })}
-                                            </ul>
+                                        <AccordionItem 
+                                            key={i}
+                                            title={list.Title}>
+                                            <ul>{helpers.parseRawGearList(list.Items).map((item, i) => { return <li key={i}>{item}</li> })}</ul>
                                         </AccordionItem>
                                     );
                                 })}
@@ -108,23 +110,21 @@ function Home(props) {
                         <Header>DISCOGRAPHY</Header>
                         <ResponsiveMasonry columnsCountBreakPoints={{350: 2, 640: 3, 900: 6}}>
                             <Masonry gutter="10px">
-                                {discographyImages.map((image, i) => {
+                                {helpers.getDiscographyGallery().map((image, i) => {
                                     return (
                                         <img 
                                             key={i}
                                             style={{width: "100%", display: "block"}}
-                                            src={image} />
+                                            src={Utils.apiUrl(image.url)} />
                                     );
                                 })}
                             </Masonry>
                         </ResponsiveMasonry>
                         <a 
-                            onClick={
-                                e => {
-                                    e.nativeEvent.preventDefault();
-                                    setShowDiscographyList(true);
-                                }
-                            }
+                            onClick={e => {
+                                e.nativeEvent.preventDefault();
+                                setShowDiscographyList(true);
+                            }}
                             className="see-full-discography"
                             href="#">
                             SEE FULL DISCOGRAPHY
@@ -140,13 +140,13 @@ function Home(props) {
                     </Container>
                 </Section>
             </main>
-            {showDiscographyList ? <DiscographyList onClose={() => setShowDiscographyList(false)} /> : null}
+            {showDiscographyList ? <DiscographyList discography={helpers.getDiscographyList()} onClose={() => setShowDiscographyList(false)} /> : null}
         </Page>
     );
 }
 
 
-export async function getStaticProps(context) {
+export async function getStaticProps() {
     const res = await fetch(process.env.SUNSICK_API_URL + "/home-page"),
         pageData = await res.json();
 

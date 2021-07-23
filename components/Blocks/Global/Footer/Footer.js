@@ -18,19 +18,9 @@ export default function Footer() {
         <div 
             ref={el}
             className="footer">
-            {/* <video 
-                autoPlay 
-                muted 
-                playsInline
-                loop>
-                <source 
-                    src="/assets/global/hero-video-bg.mp4" 
-                    type="video/mp4">
-                </source>
-            </video> */}
             <Container>
                 <p className="alex-jacobelli"><strong>ALEX JACOBELLI</strong> - AUDIO ENGINEER</p>
-                <p className="credits">WEBSITE BY <a href="https://mezaweblab.com" target="_blank">MEZWEBLAB</a></p>
+                <p className="credits">WEBSITE BY <a href="https://alexmeza.me" target="_blank">ALEX MEZA</a></p>
             </Container>
         </div>
     );
