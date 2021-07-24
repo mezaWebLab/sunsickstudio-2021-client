@@ -1,4 +1,6 @@
 .contact-form {
+    position : relative;
+
     form {
         input,
         textarea {
@@ -37,20 +39,61 @@
             }
         }
 
+        .response {
+            width         : 100%;
+            margin-bottom : 15px;
+            text-align    : center;
+
+            &.success {
+                color : #61ec57;
+            }
+
+            &.error {
+                color : red;
+            }
+        }
+
         button {
-            background    : #616161;
+            background    : #eeeeee;
             border        : none;
             max-width     : 100px;
             margin        : 0 auto;
             display       : block;
             border-radius : 5px;
+            font-weight   : 500;
             padding       : 15px;
-            color         : white;
+            color         : rgb(10, 10, 10);
             width         : 100%;
-            font-size     : 14px;   
+            font-size     : 14px;
+            position      : relative;
 
             @include md {
                 margin-top : 30px;
+            }
+
+            .submit-overlay {
+                width           : 100%;
+                height          : 100%;
+                top             : 0px;
+                left            : 0px;
+                border-radius   : 5px;
+                background      : #eeeeee;
+                position        : absolute;
+                display         : flex;
+                align-items     : center;
+                justify-content : center;
+
+                i {
+                    color     : white;
+                    font-size : 25px;
+                    color     : rgb(17, 17, 17);
+                    animation : spin 2s linear infinite;
+
+                    @keyframes spin {
+                        0% { transform : rotate(0deg) }
+                        100% { transform : rotate(360deg) }
+                    }
+                }
             }
         }
     }

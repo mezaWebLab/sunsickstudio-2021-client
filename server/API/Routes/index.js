@@ -5,6 +5,7 @@ export default data => {
     const router = new Router(data);
 
     // Your endpoints go here.
+    router.post("/api/send-email", Controllers.sendEmail);
     router.get("/api/example", Controllers.example);
     router.get("/api/root", Controllers.root);
 

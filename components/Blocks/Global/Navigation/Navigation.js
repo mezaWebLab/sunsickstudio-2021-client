@@ -3,7 +3,6 @@ import MobileOnly from "components/Utils/MobileOnly/MobileOnly";
 import DesktopOnly from "components/Utils/DesktopOnly/DesktopOnly";
 import Container from "components/UI/Container/Container";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 import scrollToElement from "scroll-to-element";
 
 export default function Navigation(props) {
@@ -12,13 +11,14 @@ export default function Navigation(props) {
             onLogoClick(e) {
                 e.nativeEvent.preventDefault();
                 scrollToElement("#hero");
+            },
+            onLinkClick(e, navItem) {
+                scrollToElement(navItem.href);
             }
         }
 
     useEffect(() => {
-        window.addEventListener("scroll", () => {
-            setScrolled(window.scrollY > 100 ? true : false);
-        });
+        window.addEventListener("scroll", () => setScrolled(window.scrollY > 100 ? true : false));
     }, []);
 
     return (
@@ -41,12 +41,14 @@ export default function Navigation(props) {
                             <MobileOnly>
                                 <a  
                                     className="social-link"
-                                    href="#">
+                                    target="_blank"
+                                    href="https://facebook.com/sunsickstudio">
                                     <i className="lab la-facebook"></i>
                                 </a>
                                 <a  
                                     className="social-link"
-                                    href="#">
+                                    target="_blank"
+                                    href="https://instagram.com/sunsickstudio">
                                     <i className="lab la-instagram"></i>
                                 </a>
                                 <button onClick={() => props.toggleMobileMenu()}>
@@ -57,23 +59,26 @@ export default function Navigation(props) {
                                 <div>
                                     <a  
                                         className="social-link"
-                                        href="#">
+                                        target="_blank"
+                                        href="https://facebook.com/sunsickstudio">
                                         <i className="lab la-facebook"></i>
                                     </a>
                                     <a  
                                         className="social-link"
-                                        href="#">
+                                        target="_blank"
+                                        href="https://instagram.com/sunsickstudio">
                                         <i className="lab la-instagram"></i>
                                     </a>
                                     <br />
                                     <div className="nav-links-wrapper">
                                         {props.navigation.map((navItem, i) => {
                                             return (
-                                                <Link 
+                                                <a 
                                                     key={i}
-                                                    href={navItem.href}>
+                                                    href={navItem.href}
+                                                    onClick={e => handlers.onLinkClick(e, navItem)}>
                                                     {navItem.title}
-                                                </Link>
+                                                </a>
                                             );
                                         })}
                                     </div>

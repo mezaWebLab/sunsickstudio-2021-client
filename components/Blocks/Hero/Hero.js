@@ -17,9 +17,11 @@ export default function Hero() {
         <div 
             className={ios ? 'ios' : ''}
             id="hero">
-            <img 
-                alt="Sunsick Studio Logo"
-                src="/assets/global/sunsick-studio-logo.png" />
+            <div className="logo-wrapper">
+                <img 
+                    alt="Sunsick Studio Logo"
+                    src="/assets/global/sunsick-studio-logo.png" />
+            </div>
             <div className="fade"></div>
             <ArrowDown />
         </div>

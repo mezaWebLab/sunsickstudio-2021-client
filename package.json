@@ -11,6 +11,7 @@
     "refresh": "chmod 755 ./assets/scripts/refresh.sh ; ./assets/scripts/refresh.sh"
   },
   "dependencies": {
+    "@sendgrid/mail": "^7.4.5",
     "app-root-path": "^3.0.0",
     "axios": "^0.21.1",
     "inquirer": "^8.0.0",

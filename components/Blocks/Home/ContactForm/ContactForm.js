@@ -5,10 +5,28 @@ export default function ContactForm() {
     const [name, setName] = useState(""),
         [email, setEmail] = useState(""),
         [message, setMessage] = useState(""),
+        [submitted, setSubmitted] = useState(false),
+        [success, setSuccess] = useState(false),
+        [error, setError] = useState(false),
         handlers = {
-            onSubmit(e) {
-                e.preventDefault();
-                // todo: connect sendgrid api
+            async onSubmit(e) {
+                if (!submitted) {
+                    e.preventDefault();
+                    setSubmitted(true);
+
+                    try {
+                        const req = await axios.post("/api/send-email", { name, email, message });
+                        setSubmitted(false);
+                        setName("");
+                        setEmail("");
+                        setMessage("");
+                        setSuccess(true);
+                    } catch (e) {
+                        console.log(e);
+                        setSubmitted(false);
+                        setError(true);
+                    }
+                }
             }
         };
 
@@ -41,7 +59,22 @@ export default function ContactForm() {
                         </textarea>
                     </div>
                 </div>
-                <button type="submit">Send</button>
+                {(success || error) ? (
+                    <div className={`response${ success ? ' success' : '' }${ error ? ' error' : '' }`}>
+                        {success ? 'Message sent! Thank you.' : ''}
+                        {error ? 'There was an error. Please try again.' : ''}
+                    </div>
+                ) : null}
+                <button
+                    className={submitted ? 'submitted' : ''} 
+                    type="submit">
+                    Send
+                    {submitted ? (
+                        <div className="submit-overlay">
+                            <i className="las la-spinner"></i>
+                        </div>
+                    ) : null}
+                </button>
             </form>
         </div>
     );

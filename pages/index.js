@@ -17,11 +17,6 @@ SwiperCore.use([Navigation]);
 
 function Home(props) {
     const [showDiscographyList, setShowDiscographyList] = useState(false),
-        handlers = {
-            onContactFormComplete() {
-
-            }
-        },
         helpers = {
             parseRawGearList(rawList) {
                 const parsedList = rawList.split("\n");
@@ -136,7 +131,7 @@ function Home(props) {
                     fadeBg={true}>
                     <Container>
                         <Header>CONTACT US</Header>
-                        <ContactForm onCompleteHandler={handlers.onContactFormComplete}></ContactForm>
+                        <ContactForm></ContactForm>
                     </Container>
                 </Section>
             </main>

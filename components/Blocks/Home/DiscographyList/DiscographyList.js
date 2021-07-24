@@ -18,9 +18,9 @@ export default function DiscographyList(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {props.discography.map(release => {
+                        {props.discography.map((release, i) => {
                             return (
-                                <tr>
+                                <tr key={i}>
                                     <td>{release.name}</td>
                                     <td>{release.tracks}</td>
                                 </tr>
