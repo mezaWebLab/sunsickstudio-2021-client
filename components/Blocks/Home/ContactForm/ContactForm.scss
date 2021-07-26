@@ -44,6 +44,10 @@
             margin-bottom : 15px;
             text-align    : center;
 
+            @include md {
+                margin-top : 25px;
+            }
+
             &.success {
                 color : #61ec57;
             }

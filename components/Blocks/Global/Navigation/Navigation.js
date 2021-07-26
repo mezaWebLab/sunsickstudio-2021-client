@@ -13,7 +13,8 @@ export default function Navigation(props) {
                 scrollToElement("#hero");
             },
             onLinkClick(e, navItem) {
-                scrollToElement(navItem.href);
+                const targetEl = document.querySelector("#navigation");
+                scrollToElement(navItem.href, { offset: -targetEl.offsetHeight });
             }
         }
 

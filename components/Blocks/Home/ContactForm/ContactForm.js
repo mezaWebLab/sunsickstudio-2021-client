@@ -61,7 +61,7 @@ export default function ContactForm() {
                 </div>
                 {(success || error) ? (
                     <div className={`response${ success ? ' success' : '' }${ error ? ' error' : '' }`}>
-                        {success ? 'Message sent! Thank you.' : ''}
+                        {success ? 'Message sent! We will get in touch with you shortly.' : ''}
                         {error ? 'There was an error. Please try again.' : ''}
                     </div>
                 ) : null}
