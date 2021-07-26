@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
                     content="initial-scale=1.0, width=device-width" />
                 <link 
                     rel="icon" 
-                    href="/favicon.ico" />
+                    href="/favicon.png" />
                 <link 
                     rel="stylesheet" 
                     href="assets/vendor/line-awesome/css/shake.min.css" />
