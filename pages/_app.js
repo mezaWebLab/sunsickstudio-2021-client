@@ -19,7 +19,7 @@ export default function App({ Component, pageProps }) {
                     content="https://sunsickstudio.com" />
                 <meta 
                     property="og:image" 
-                    content="/meta.png" />
+                    content="meta.png" />
                 <meta  
                     property="og:description"
                     content="Recording studio based in San Diego, CA." />
