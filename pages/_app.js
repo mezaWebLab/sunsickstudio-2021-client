@@ -20,6 +20,12 @@ export default function App({ Component, pageProps }) {
                 <meta 
                     property="og:image" 
                     content="/meta.png" />
+                <meta  
+                    property="og:description"
+                    content="Recording studio based in San Diego, CA." />
+                <meta  
+                    property="description"
+                    content="Recording studio based in San Diego, CA." />
                 <link 
                     rel="icon" 
                     href="/favicon.png" />
