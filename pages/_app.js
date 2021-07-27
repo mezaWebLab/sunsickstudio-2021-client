@@ -11,6 +11,15 @@ export default function App({ Component, pageProps }) {
                 <meta 
                     name="viewport" 
                     content="initial-scale=1.0, width=device-width" />
+                <meta 
+                    property="og:title" 
+                    content="Sunsick Studio" />
+                <meta 
+                    property="og:url" 
+                    content="https://sunsickstudio.com" />
+                <meta 
+                    property="og:image" 
+                    content="/meta.png" />
                 <link 
                     rel="icon" 
                     href="/favicon.png" />
