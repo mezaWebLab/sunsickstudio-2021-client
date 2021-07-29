@@ -40,6 +40,11 @@ function Home(props) {
                         tracks: artist.Tracks
                     };
                 });
+            },
+            getPlaylists() {
+                return props.pageData.playlists.map(playlist => {
+                    return { embed: playlist.embed }
+                });
             }
         };
 
@@ -87,14 +92,11 @@ function Home(props) {
                     alt={true}>
                     <Container>
                         <Header>LISTEN</Header>
-                        <iframe 
-                            src="https://open.spotify.com/embed/playlist/2ngJuLSYa49LtYngLiyk6Y" 
-                            width="100%" 
-                            height="380" 
-                            frameBorder="0" 
-                            allowtransparency="true" 
-                            allow="encrypted-media">
-                        </iframe>
+                        {helpers.getPlaylists().map(playlist => {
+                            return (
+                                <div dangerouslySetInnerHTML={{__html: playlist.embed}}></div>
+                            );
+                        })}
                     </Container>
                 </Section>
                 <Section id="discography">
