@@ -140,11 +140,11 @@ function Home(props) {
 }
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const res = await fetch(process.env.SUNSICK_API_URL + "/home-page"),
         pageData = await res.json();
 
-    return { props: { pageData }, revalidate: 1000 };
+    return { props: { pageData } };
 }
 
 export default Home;
