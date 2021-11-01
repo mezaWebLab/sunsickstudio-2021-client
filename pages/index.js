@@ -92,9 +92,12 @@ function Home(props) {
                     alt={true}>
                     <Container>
                         <Header>LISTEN</Header>
-                        {helpers.getPlaylists().map(playlist => {
+                        {helpers.getPlaylists().map((playlist, i) => {
                             return (
-                                <div dangerouslySetInnerHTML={{__html: playlist.embed}}></div>
+                                <div 
+                                    key={i}
+                                    dangerouslySetInnerHTML={{__html: playlist.embed}}>
+                                </div>
                             );
                         })}
                     </Container>
