@@ -7,7 +7,7 @@ exports.sendEmail = async (req, res) => {
         if (req.body.name && req.body.email && req.body.message) {
             const msg = {
                 to: "mezawebdev@gmail.com",
-                from: "noreply@sunsickstudio.com",
+                from: "alex@mezaweblab.com",
                 subject: "SunsickStudio.com Contact Form Submission",
                 text: "SunsickStudio.com",
                 html: `
